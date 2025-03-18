@@ -18,7 +18,9 @@ app.post('/api/sandbox/connection-details', async (req, res) => {
 		ttl: 3600
 	});
 	
-	at.addGrant({ roomJoin: true, room: roomName});
+	at.addGrant({ roomJoin: true, room: roomName, roomJoin: true,
+  canPublish: true,
+  canSubscribe: true,});
 	
 	const token = await at.toJwt();
 	
