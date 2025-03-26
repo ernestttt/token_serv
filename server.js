@@ -20,7 +20,9 @@ app.post('/api/sandbox/connection-details', async (req, res) => {
 	
 	at.addGrant({ roomJoin: true, room: roomName, roomJoin: true,
   canPublish: true,
-  canSubscribe: true,});
+  canSubscribe: true,
+  canUpdateOwnMetadata: true,
+  });
 	
 	const token = await at.toJwt();
 	
