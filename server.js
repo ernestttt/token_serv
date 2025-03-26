@@ -22,6 +22,8 @@ app.post('/api/sandbox/connection-details', async (req, res) => {
   canPublish: true,
   canSubscribe: true,
   canUpdateOwnMetadata: true,
+  canPublishData: true,
+  roomCreate: true,
   });
 	
 	const token = await at.toJwt();
